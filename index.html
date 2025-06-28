@@ -80,6 +80,26 @@
       border-radius: 8px;
       border: 2px solid #b497d6;
     }
+    .about {
+      background: #fdfdfe;
+      padding: 1.5rem;
+      border-left: 4px solid #cbb6f5;
+      border-radius: 10px;
+      margin-top: 2rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
+    }
+    .support-box {
+      background: #fdfdfe;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .support-box p {
+      margin: 0.5rem 0;
+    }
   </style>
 </head>
 <body>
@@ -89,6 +109,11 @@
   </header>
 
   <main>
+    <section class="about">
+      <h2>About This Space</h2>
+      <p>This space was born from a deep need for connection in silence. Whether you're overwhelmed, unheard, or healing — you are welcome here. 'Untold Feelings' is your quiet room on the internet where your heart can speak freely.</p>
+    </section>
+
     <section id="daily-quote">
       <h2>Today's Quote</h2>
       <div class="quote-box" id="quote-box">
@@ -101,16 +126,19 @@
       <form action="https://formsubmit.co/darkqueen6381@gmail.com" method="POST">
         <textarea name="message" rows="6" placeholder="Type your message here..." required></textarea>
         <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://untoldfeelings23.github.io/dearstranger/thankyou.html" />
         <button type="submit">Send</button>
       </form>
     </section>
 
     <section id="support">
       <h2>Support the Creator</h2>
-      <p>If this space has helped you or brought you peace, consider supporting me:</p>
-      <p><strong>UPI ID:</strong> 7094815743@ptaxis</p>
-      <img src="upi-qrcode.jpg" alt="UPI QR Code" class="qr" />
-      <p>Thank you for keeping this safe space alive.</p>
+      <div class="support-box">
+        <p>If this space brought you comfort, you can support its growth:</p>
+        <p><strong>UPI ID:</strong> 7094815743@ptaxis</p>
+        <img src="upi-qrcode.jpg" alt="UPI QR Code" class="qr" />
+        <p>Thank you for keeping this safe space alive.</p>
+      </div>
     </section>
   </main>
 
