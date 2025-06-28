@@ -100,6 +100,19 @@
     .support-box p {
       margin: 0.5rem 0;
     }
+    .copy-btn {
+      background-color: #b497d6;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .copy-btn:hover {
+      background-color: #a184c4;
+    }
   </style>
 </head>
 <body>
@@ -135,7 +148,8 @@
       <h2>Support the Creator</h2>
       <div class="support-box">
         <p>If this space brought you comfort, you can support its growth:</p>
-        <p><strong>UPI ID:</strong> 7094815743@ptaxis</p>
+        <p><strong>UPI ID:</strong> <span id="upi">7094815743@ptaxis</span></p>
+        <button class="copy-btn" onclick="copyUPI()">Copy UPI ID</button>
         <img src="upi-qrcode.jpg" alt="UPI QR Code" class="qr" />
         <p>Thank you for keeping this safe space alive.</p>
       </div>
@@ -153,8 +167,14 @@
       "It’s okay to rest. You’re not falling behind."
     ];
     const today = new Date().getDate();
-    const quoteBox = document.getElementById('quote-box');
-    quoteBox.textContent = quotes[today % quotes.length];
+    document.getElementById('quote-box').textContent = quotes[today % quotes.length];
+
+    function copyUPI() {
+      const upi = document.getElementById("upi").textContent;
+      navigator.clipboard.writeText(upi).then(() => {
+        alert("UPI ID copied to clipboard!");
+      });
+    }
   </script>
 </body>
 </html>
