@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Untold Feelings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f6f9;
+      color: #2e2e38;
+    }
+    header {
+      background: #b497d6;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 2px solid #a89ccf;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: white;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #f4f4f4;
+      margin-top: 0.5rem;
+    }
+    main {
+      padding: 2rem 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .quote-box {
+      background: white;
+      border-left: 4px solid #b497d6;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    }
+    section {
+      margin-top: 2rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    }
+    textarea {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: #fdfdfe;
+      color: #2e2e38;
+      margin-top: 1rem;
+    }
+    button {
+      background: #cbb6f5;
+      color: #2e2e38;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #a89ccf;
+    }
+    img.qr {
+      width: 200px;
+      margin-top: 1rem;
+      border-radius: 8px;
+      border: 2px solid #b497d6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Untold Feelings</h1>
+    <p>You are not alone. This is your safe space.</p>
+  </header>
+
+  <main>
+    <section id="daily-quote">
+      <h2>Today's Quote</h2>
+      <div class="quote-box" id="quote-box">
+        Loading quote...
+      </div>
+    </section>
+
+    <section>
+      <h2>Share What's on Your Heart</h2>
+      <form action="https://formsubmit.co/darkqueen6381@gmail.com" method="POST">
+        <textarea name="message" rows="6" placeholder="Type your message here..." required></textarea>
+        <input type="hidden" name="_captcha" value="false" />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <section id="support">
+      <h2>Support the Creator</h2>
+      <p>If this space has helped you or brought you peace, consider supporting me:</p>
+      <p><strong>UPI ID:</strong> 7094815743@ptaxis</p>
+      <img src="upi-qrcode.jpg" alt="UPI QR Code" class="qr" />
+      <p>Thank you for keeping this safe space alive.</p>
+    </section>
+  </main>
+
+  <script>
+    const quotes = [
+      "You are stronger than the voice in your head says.",
+      "Healing takes time — and you are doing better than you think.",
+      "Every feeling you have is valid.",
+      "Even a whisper of hope is still hope.",
+      "Your story isn’t over yet.",
+      "Be gentle with yourself. You’re doing your best.",
+      "It’s okay to rest. You’re not falling behind."
+    ];
+    const today = new Date().getDate();
+    const quoteBox = document.getElementById('quote-box');
+    quoteBox.textContent = quotes[today % quotes.length];
+  </script>
+</body>
+</html>
